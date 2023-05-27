@@ -1,0 +1,173 @@
+:root {
+    --body-bg: url("../_img/backgrounds/bg_carpet2348.jpg");
+    --leftbar-bg: url("../_img/backgrounds/bg_staticBlack.gif");
+}
+
+/*
+font-family: 'Foldit', cursive;
+font-family: 'Pangolin', cursive;
+font-family: 'Press Start 2P', cursive;
+*/
+
+body {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    display: flex;
+    justify-content: center;
+    margin: 0px;
+    background-image: var(--body-bg);
+    background-size: 20%;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.leftbar {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../_img/backgrounds/bg_staticBlack.gif");
+
+    border-image-slice:
+        0 27 0 27;
+    border-image-width:
+        0px 27px 0px 0px;
+    border-image-outset:
+        0px 0px 0px 0px;
+    border-image-repeat:
+        repeat repeat;
+    border-image-source:
+        url("/_img/backgrounds/bg_woodVertical.jpg");
+    border-style:
+        solid;
+    padding-right: 27px;
+
+}
+
+/* unvisited link */
+.leftbar a:link {
+    color: lightblue;
+}
+
+/* visited link */
+.leftbar a:visited {
+    color: mediumpurple;
+}
+
+/* mouse over link */
+.leftbar a:hover {
+    color: yellow;
+}
+
+.leftbar ul {
+    list-style-image: url("https://dl.glitter-graphics.com/pub/2289/2289222i0xu1pqmry.gif");
+}
+
+.leftbar ul ul {
+    /* Use the "ul ul" selector to apply things to only lists that are nested inside other lists!1 */
+    list-style-image: url("https://dl.glitter-graphics.com/pub/1177/1177968a1tezkojxa.gif");
+}
+
+.sidecolumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidecolumn:nth-child(odd) {
+    margin-left: 10px;
+}
+
+.sidecolumn:nth-child(even) {
+    margin-right: 10px;
+}
+
+img.title {
+    padding: 10px;
+}
+
+iframe {
+    border: 0;
+}
+
+.thingbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* funky stuff below */
+
+.tv {
+    border-image-slice:
+        61 107 61 107;
+    border-image-width:
+        61px 107px 61px 107px;
+    border-image-outset:
+        0px 0px 0px 0px;
+    border-image-repeat:
+        stretch stretch;
+    border-image-source: url("../_img/90sTVresizeBorder.png");
+}
+
+/* The .letter class is from https://codepen.io/mlms13/pen/ngbMxq */
+/* The .letter-mini class is just .letter lower max width and min height */
+
+.letter,
+.letter-mini {
+    font-family: 'Pangolin', cursive;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin: 26px auto 26px auto;
+    padding: 24px;
+    position: relative;
+    width: 80%;
+}
+
+.letter {
+    max-width: 550px;
+    /*
+    min-height: 300px;
+    */
+}
+
+.letter-mini {
+    max-width: 275px;
+    /*
+    min-height: 100px;
+    */
+}
+
+.letter:before,
+.letter:after,
+.letter-mini:before,
+.letter-mini:after {
+    content: "";
+    height: 98%;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.letter:before,
+.letter-mini:before {
+    background: #fafafa;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+    left: -5px;
+    top: 4px;
+    transform: rotate(-2.5deg);
+}
+
+.letter:after,
+.letter-mini:after {
+    background: #f6f6f6;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    right: -3px;
+    top: 1px;
+    transform: rotate(1.4deg);
+}

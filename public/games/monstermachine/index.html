@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <title>The Monster Machine</title>
+    <link rel="stylesheet" href="/_css/defaults.css">
+
+    <script>
+        function startDrag(e) {
+            // determine event object
+            if (!e) {
+                var e = window.event;
+            }
+            if (e.preventDefault) e.preventDefault();
+
+            // IE uses srcElement, others use target
+            targ = e.target ? e.target : e.srcElement;
+
+            if (targ.className != 'dragme') {
+                return
+            };
+            // calculate event X, Y coordinates
+            offsetX = e.clientX;
+            offsetY = e.clientY;
+
+            // assign default values for top and left properties
+            if (!targ.style.left) {
+                targ.style.left = '0px'
+            };
+            if (!targ.style.top) {
+                targ.style.top = '0px'
+            };
+
+            // calculate integer values for top and left
+            // properties
+            coordX = parseInt(targ.style.left);
+            coordY = parseInt(targ.style.top);
+            drag = true;
+
+            // move div element
+            document.onmousemove = dragDiv;
+            return false;
+
+        }
+
+        function dragDiv(e) {
+            if (!drag) {
+                return
+            };
+            if (!e) {
+                var e = window.event
+            };
+            // var targ=e.target?e.target:e.srcElement;
+            // move div element
+            targ.style.left = coordX + e.clientX - offsetX + 'px';
+            targ.style.top = coordY + e.clientY - offsetY + 'px';
+            return false;
+        }
+
+        function stopDrag() {
+            drag = false;
+        }
+        window.onload = function() {
+            document.onmousedown = startDrag;
+            document.onmouseup = stopDrag;
+        }
+
+    </script>
+    <style>
+        body {
+            background-color: #222;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .box {
+            width: 60%;
+            margin: 5px;
+            padding: 10px;
+            background-color: dimGray;
+            font-family: monospace;
+            border: 2px solid black;
+        }
+
+        .partbox {
+            /*
+            display: flex;
+            flex-wrap: wrap;
+            */
+            margin: 5px;
+            padding: 10px;
+            background-color: gray;
+            font-family: monospace;
+            border: 2px solid black;
+            border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+        }
+
+        .partboxbox {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .dragme {
+            position: relative;
+            cursor: move;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="box">
+
+        <h1>The Monster Machine</h1>
+        <p>Welcome to The Monster Machine! Use the parts provided below to create your own monster! Some of the below parts were made by others - hover over something to see who made it (I made most of them though, lol).</p>
+        <p>Once you're done, you can adopt your creation and let it live on your website. Make sure to put this certificate somewhere on the page so people know where you got your monster from!</p>
+        <center>
+            <a href="https://missmoss.neocities.org/games/monstermachine"><img src="certificate_2023.png"></a><br>
+            <textarea><a href="https://missmoss.neocities.org/games/monstermachine"><img src="https://i.imgur.com/jQ9ZpEy.png"></a></textarea>
+        </center>
+        <p><b>Scroll to the bottom of the page</b> for a greenscreen "workshop" to assemble your monster.</p>
+        <br>
+        <div class="partboxbox">
+            <div class="partbox">
+                <h2>Bodies</h2>
+                <img src='bodies/body_blob1.png' alt="" style="z-index:1;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/body_blob1.png' alt="" style="z-index:1;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/body_blob2.png' alt="" style="z-index:1;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/body_blob2.png' alt="" style="z-index:1;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/body_circle1.png' alt="" style="z-index:1;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/body_circle1.png' alt="" style="z-index:1;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/body_circle2.png' alt="" style="z-index:1;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/body_circle2.png' alt="" style="z-index:1;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/body_cylinder.png' alt="" style="z-index:1;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/body_cylinder.png' alt="" style="z-index:1;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/body_dome1.png' alt="" style="z-index:1;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/body_dome1.png' alt="" style="z-index:1;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/body_oval1.png' alt="" style="z-index:1;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/body_oval1.png' alt="" style="z-index:1;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/body_triangle1.png' alt="" style="z-index:1;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/body_triangle1.png' alt="" style="z-index:1;" class="dragme" title="MissMoss Original Part">
+            </div>
+            <div class="partbox">
+                <h2>Patches</h2>
+                <p>Use these to cover the black lines on the Bodies in order to blend multiple of them together.</p>
+                <img src='bodies/patch_1.png' alt="" style="z-index:2;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/patch_1.png' alt="" style="z-index:2;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/patch_1.png' alt="" style="z-index:2;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/patch_1.png' alt="" style="z-index:2;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/patch_2.png' alt="" style="z-index:2;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/patch_2.png' alt="" style="z-index:2;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/patch_2.png' alt="" style="z-index:2;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/patch_2.png' alt="" style="z-index:2;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/patch_3.png' alt="" style="z-index:2;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/patch_3.png' alt="" style="z-index:2;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/patch_3.png' alt="" style="z-index:2;" class="dragme" title="MissMoss Original Part">
+                <img src='bodies/patch_3.png' alt="" style="z-index:2;" class="dragme" title="MissMoss Original Part">
+            </div>
+            <div class="partbox">
+                <h2>Ears</h2><br>
+                <img src='ears/ear_triangle1.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='ears/ear_triangle2.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+            </div>
+            <div class="partbox">
+                <h2>Eyes</h2>
+                <img src='eyes/eye_button1.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='eyes/eye_button2.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='eyes/eye_c1.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='eyes/eye_c2.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='eyes/eye_cyclops.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='eyes/eye_d1.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='eyes/eye_dl1.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='eyes/eye_dr1.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='eyes/eye_eyelashes1.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='eyes/eye_eyelashes2.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='eyes/eye_tired1.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='eyes/eye_tired2.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='eyes/eye_triangle1.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='eyes/eye_triangle2.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='eyes/eye_u1.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='eyes/eye_ur1.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='eyes/eye_x1.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='eyes/eye_x2.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+            </div>
+            <div class="partbox">
+                <h2>Feet</h2>
+                <img src='feet/foot_chunkleft.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='feet/foot_chunkright.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='feet/foot_pointleft.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='feet/foot_pointright.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+            </div>
+            <div class="partbox">
+                <h2>Limbs</h2>
+                <img src='limbs/limb_pointy1.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='limbs/limb_pointy2.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='limbs/limb_pointy3.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='limbs/limb_pointy4.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='limbs/limb_pointy5.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='limbs/limb_realistic1.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='limbs/limb_realistic2.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='limbs/limb_tentacle1.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='limbs/limb_tentacle2.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+            </div>
+            <div class="partbox">
+                <h2>Mouths</h2>
+                <img src='mouths/mouth_big1.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='mouths/mouth_big2.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='mouths/mouth_big3.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='mouths/mouth_big4.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='mouths/mouth_little1.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='mouths/mouth_little2.png' alt="" style="z-index:4;" class="dragme" title="MissMoss Original Part">
+                <img src='mouths/mouth_melonking1.png' alt="" style="z-index:4;" class="dragme" title="Made by MelonKing">
+            </div>
+            <div class="partbox">
+                <h2>Noses</h2>
+                <img src='noses/nose_melonking1.png' alt="" style="z-index:5;" class="dragme" title="Made by MelonKing">
+                <img src='noses/nose_melonking2.png' alt="" style="z-index:5;" class="dragme" title="Made by MelonKing">
+                <img src='noses/nose_melonking3.png' alt="" style="z-index:5;" class="dragme" title="Made by MelonKing">
+                <img src='noses/nose_melonking4.png' alt="" style="z-index:5;" class="dragme" title="Made by MelonKing">
+            </div>
+            <div class="partbox">
+                <h2>Toes?</h2>
+                <img src='toes/toes_aleft.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='toes/toes_aright.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='toes/toes_bleft.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='toes/toes_bright.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+            </div>
+            <div class="partbox">
+                <h2>Accessories</h2>
+                <img src='accessories/accessory_dragonleft.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='accessories/accessory_dragonright.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='accessories/accessory_fairyleft.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='accessories/accessory_fairyright.png' alt="" style="z-index:3;" class="dragme" title="MissMoss Original Part">
+                <img src='hair/hair_melonking1.png' alt="" style="z-index:6;" class="dragme" title="Made by MelonKing">
+            </div>
+        </div>
+    </div>
+
+    <div class="box" alt="" style="color:white; background-color:#00ff00; height:600px;">
+        <p>Assemble your monster here!</p>
+        <img src="__extras/extra_exclamation1.png" alt="" style="z-index:9;" class="dragme" title="MissMoss Original Part">
+        <img src="__extras/extra_exclamation2.png" alt="" style="z-index:9;" class="dragme" title="MissMoss Original Part">
+        <img src="__extras/extra_heart.png" alt="" style="z-index:9;" class="dragme" title="MissMoss Original Part">
+        <img src="__extras/extra_star.png" alt="" style="z-index:9;" class="dragme" title="MissMoss Original Part">
+    </div>
+
+</body>
+
+</html>
