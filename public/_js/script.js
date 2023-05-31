@@ -10,10 +10,10 @@ function includeHTML() {
     if (file) {
       /* Make an HTTP request using the attribute value as the file name: */
       xhttp = new XMLHttpRequest();
-      xhttp.onreadystatechange = function() {
+      xhttp.onreadystatechange = function () {
         if (this.readyState == 4) {
-          if (this.status == 200) {elmnt.innerHTML = this.responseText;}
-          if (this.status == 404) {elmnt.innerHTML = "Page not found.";}
+          if (this.status == 200) { elmnt.innerHTML = this.responseText; }
+          if (this.status == 404) { elmnt.innerHTML = "Page not found."; }
           /* Remove the attribute, and call this function once more: */
           elmnt.removeAttribute("w3-include-html");
           includeHTML();
@@ -25,4 +25,9 @@ function includeHTML() {
       return;
     }
   }
+}
+
+/* https://stackoverflow.com/questions/60032891/how-to-play-audio-on-the-click-of-html-page-link */
+function delay(URL, milli) {
+  setTimeout(function () { window.location = URL }, milli);
 }

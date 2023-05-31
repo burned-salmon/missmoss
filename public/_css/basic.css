@@ -79,14 +79,6 @@ main {
     align-items: center;
 }
 
-.sidecolumn:nth-child(odd) {
-    margin-left: 10px;
-}
-
-.sidecolumn:nth-child(even) {
-    margin-right: 10px;
-}
-
 img.title {
     padding: 10px;
 }
@@ -103,6 +95,28 @@ iframe {
 
 /* funky stuff below */
 
+/* Petz Catz 2 DS menu button recreation */
+button.pc2 {
+    color: #d5dbff;
+    border: 3px solid #1510ff;
+    border-radius: 25% / 100px;
+    background-color: #5556ff;
+    padding: 2px;
+}
+
+button.pc2:active {
+    border-color: #f6f227;
+    background-color: #c9944a;
+}
+
+button.pc2 p {
+    background-color: #4044ff;
+    border-radius: inherit;
+    margin: 0;
+    padding: 0 10px;
+}
+
+/* poor attempt at making an old TV effect with nothing but border images */
 .tv {
     border-image-slice:
         61 107 61 107;
