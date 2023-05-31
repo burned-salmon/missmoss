@@ -24,29 +24,34 @@
     <img src="_img/navi-gator.gif" title="The Navi-Gator™ Gator says: &#34;I eat nazis!&#34;"
       alt="The Navi-Gator™ Gator" />
     <img src="_img/text/sec_navigator.gif" alt="Navi-Gator™" />
-    <audio id="pc2button" src="/_audio/PC2_ButtonSoft170.wav" preload="auto">
+    <audio id="linksound" src="/_audio/PC2_ButtonSoft170.wav" preload="auto">
       <p>Sorry, your browser doesn't support my cool audio :(</p>
     </audio>
+    <audio id="pc2button" src="/_audio/PC2_ButtonSharp380.wav" preload="auto"></audio>
 
     <nav>
       <ul>
-        <li><a href="/home.html" target="main">Home</a></li>
+        <li><a href="/home.html" target="main" onclick="document.getElementById('linksound').play()">Home</a></li>
         <li>Collections</li>
         <ul>
-          <li>
-            <a href="/collections/greenhouse/" target="main">My Greenhouse</a>
-          </li>
-          <li><a href="/collections/toybox/" target="main">Toybox</a></li>
-          <li><a href="/collections/adopts/" target="main">Adopts</a></li>
-          <li><a href="/collections/quizzes/" target="main">Quizzes</a></li>
+          <li><a href="/collections/greenhouse/" target="main" onclick="document.getElementById('linksound').play()">My
+              Greenhouse</a></li>
+          <li><a href="/collections/toybox/" target="main"
+              onclick="document.getElementById('linksound').play()">Toybox</a></li>
+          <li><a href="/collections/adopts/" target="main"
+              onclick="document.getElementById('linksound').play()">Adopts</a></li>
+          <li><a href="/collections/quizzes/" target="main"
+              onclick="document.getElementById('linksound').play()">Quizzes</a></li>
         </ul>
         <li>Projects</li>
         <ul>
           <li>
-            <a href="https://webgardens.neocities.org" target="main">Webgardens</a>
+            <a href="https://webgardens.neocities.org" target="main"
+              onclick="document.getElementById('linksound').play()">Webgardens</a>
           </li>
           <li>
-            <a href="/projects/navi-gator/" target="main">Navi-Gator™ Fanclub</a>
+            <a href="/projects/navi-gator/" target="main"
+              onclick="document.getElementById('linksound').play()">Navi-Gator™ Fanclub</a>
           </li>
           <li>
             <a href="https://codepen.io/missmoss/pen/VwPKpXm" target="_top">shelves.css</a>
@@ -55,7 +60,8 @@
         <li>Pixel Cliques</li>
         <ul>
           <li>
-            <a href="/pixelcliques/teenytowers/" target="main">Teeny Towers!</a>
+            <a href="/pixelcliques/teenytowers/" target="main"
+              onclick="document.getElementById('linksound').play()">Teeny Towers!</a>
           </li>
           <!--
                     <li><a href="/pixelcliques/more/" target="main">...and more!</a> <img src="http://dl10.glitter-graphics.net/pub/442/442960qk4wjtzztt.gif"></li>
