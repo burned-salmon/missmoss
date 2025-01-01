@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+  <title>Miss Moss</title>
+  <link rel="stylesheet" href="/_css/defaults.css" />
+  <link rel="stylesheet" href="/_css/basic.css" />
+
+  <script src="https://melonking.net/scripts/frame-link.js"></script>
+
+  <script src="https://unpkg.com/cursor-effects@latest/dist/browser.js"></script>
+  <script src="https://yesterwebring.neocities.org/script.js"></script>
+
+  <script src="/_js/fakefeedback.js"></script>
+  <script src="/_js/script.js"></script>
+</head>
+
+<body>
+  <div class="leftbar">
+    <img src="/_img/navi-gator.gif" title="The Navi-Gator™ Gator says: &#34;I eat nazis!&#34;"
+      alt="The Navi-Gator™ Gator" />
+    <img src="/_img/text/sec_navigator.gif" alt="Navi-Gator™" />
+    <audio id="linksound" src="/_audio/PC2_ButtonSoft170.wav" preload="auto">
+      <p>Sorry, your browser doesn't support my cool audio :(</p>
+    </audio>
+    <audio id="pc2button" src="/_audio/PC2_ButtonSharp380.wav" preload="auto"></audio>
+
+    <nav>
+      <ul>
+        <li><a href="/" onclick="document.getElementById('linksound').play()">Home</a></li>
+        <li>Collections</li>
+        <ul>
+          <li><a href="/collections/greenhouse/" target="main" onclick="document.getElementById('linksound').play()">My
+              Greenhouse</a></li>
+          <li><a href="/collections/toybox/" target="main"
+              onclick="document.getElementById('linksound').play()">Toybox</a></li>
+          <li><a href="/collections/adopts/" target="main"
+              onclick="document.getElementById('linksound').play()">Adopts</a></li>
+          <li><a href="/collections/quizzes/" target="main"
+              onclick="document.getElementById('linksound').play()">Quizzes</a></li>
+        </ul>
+        <li>Projects</li>
+        <ul>
+          <li>
+            <a href="https://webgardens.neocities.org" target="main"
+              onclick="document.getElementById('linksound').play()">Webgardens</a>
+          </li>
+          <li>
+            <a href="/projects/navi-gator/" target="main"
+              onclick="document.getElementById('linksound').play()">Navi-Gator™ Fanclub</a>
+          </li>
+          <li>
+            <a href="https://codepen.io/missmoss/pen/VwPKpXm" target="_top">shelves.css</a>
+          </li>
+        </ul>
+        <li>Pixel Cliques</li>
+        <ul>
+          <li>
+            <a href="/pixelcliques/teenytowers/" target="main"
+              onclick="document.getElementById('linksound').play()">Teeny Towers!</a>
+          </li>
+          <!--
+                    <li><a href="/pixelcliques/more/" target="main">...and more!</a> <img src="http://dl10.glitter-graphics.net/pub/442/442960qk4wjtzztt.gif"></li>
+                    -->
+        </ul>
+        <li>Games/Toys</li>
+        <ul>
+          <li><a href="/games/monstermachine/">The Monster Machine</a></li>
+          <li><a href="/games/girb/">Girb?</a></li>
+        </ul>
+        <li>Find me at...</li>
+        <ul>
+          <li>
+            <a rel="me" href="https://computerfairi.es/@missmoss">Mastodon</a>
+          </li>
+          <li>
+            <a rel="me" href="https://forum.melonland.net/index.php?action=profile;u=675">MelonLand Forum</a>
+          </li>
+        </ul>
+      </ul>
+    </nav>
+    <iframe width="180" height="180" style="border: none" src="https://dimden.neocities.org/navlink/"
+      name="neolink"></iframe>
+    <br>
+    <button class="pc2" onclick="document.getElementById('pc2button').play();">
+      <p>Secret nostalgia button!</p>
+    </button>
+  </div>
+  <iframe id="mainframe" name="main" src="/home.html" width="100%"></iframe>
+</body>
+
+<script>
+  includeHTML();
+</script>
+
+</html>
